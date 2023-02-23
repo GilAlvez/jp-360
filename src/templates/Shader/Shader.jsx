@@ -1,4 +1,3 @@
-// @ts-nocheck
 import * as THREE from 'three'
 import { extend, useFrame } from '@react-three/fiber'
 import { shaderMaterial } from '@react-three/drei'
@@ -17,7 +16,6 @@ const ShaderImpl = shaderMaterial(
 
 // This is the 🔑 that HMR will renew if this file is edited
 // It works for THREE.ShaderMaterial as well as for drei/shaderMaterial
-// @ts-ignore
 ShaderImpl.key = THREE.MathUtils.generateUUID()
 
 extend({ ShaderImpl })
