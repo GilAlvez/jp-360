@@ -3,7 +3,8 @@ import Instructions from '@/components/dom/Instructions'
 import Seo from '@/components/dom/SEO'
 
 const Scene = dynamic(() => import('@/components/canvas/Scene'), { ssr: true })
-const Logo = dynamic(() => import('@/components/canvas/Logo'), { ssr: false })
+// const Logo = dynamic(() => import('@/components/canvas/Logo'), { ssr: false })
+const Sky360 = dynamic(() => import('@/components/canvas/Sky360'), { ssr: false })
 
 export default function Page(props) {
   return (
@@ -19,7 +20,8 @@ export default function Page(props) {
 
       <div className='absolute bottom-0 w-full bg-zinc-800 h-[500px]'>
         <Scene>
-          <Logo scale={0.5} route='/blob' position-y={-1} />
+          {/*  <Logo scale={0.5} route='/blob' position-y={-1} /> */}
+          <Sky360 />
         </Scene>
       </div>
     </>
