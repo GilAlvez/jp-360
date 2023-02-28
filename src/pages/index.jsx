@@ -4,22 +4,20 @@ import Seo from '@/components/dom/SEO'
 
 const Scene = dynamic(() => import('@/components/canvas/Scene'), { ssr: true })
 const Pointer = dynamic(() => import('@/components/canvas/Pointer'), { ssr: false })
-const Sky360 = dynamic(() => import('@/components/canvas/Sky360'), { ssr: false })
+const Sky360 = dynamic(() => import('@/components/canvas/Sky360'), { ssr: true })
 
 export default function Page() {
   return (
     <>
       <Seo />
 
-      <div className='w-full bg-zinc-800 aspect-[21_/_9]'>
-        <Scene>
-          <Sky360 imageUrl={'/360.jpg'} />
-          <Pointer hAngle={345} route='/janela' />
-          <Pointer hAngle={305} route='/quarto' />
-        </Scene>
-      </div>
+      <Scene preloadImage='/360-thumb.jpg'>
+        <Sky360 imageUrl='/360.jpg' />
+        <Pointer hAngle={345} route='/#test' />
+        <Pointer hAngle={305} route='/quarto' />
+      </Scene>
 
-      <Instructions>
+      <Instructions id='test'>
         This project uses Nextjs + React-three-fiber and Threejs. Click on the{' '}
         <span className='font-bold text-cyan-200'>white pointer</span> to navigate to the{' '}
         <span className='font-bold text-green-200'>/[dynamic-route]</span> page.
