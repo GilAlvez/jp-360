@@ -11,11 +11,13 @@ export default function Page() {
     <>
       <Seo />
 
-      <Scene>
-        <Sky360 imageUrl={'/360.jpg'} />
-        <Pointer hAngle={345} route='/janela' />
-        <Pointer hAngle={305} route='/quarto' />
-      </Scene>
+      <div className='w-full bg-zinc-800 aspect-[21_/_9]'>
+        <Scene>
+          <Sky360 imageUrl={'/360.jpg'} />
+          <Pointer hAngle={345} route='/janela' />
+          <Pointer hAngle={305} route='/quarto' />
+        </Scene>
+      </div>
 
       <Instructions>
         This project uses Nextjs + React-three-fiber and Threejs. Click on the{' '}
