@@ -10,19 +10,16 @@ export default function Page(props) {
   return (
     <>
       <Seo />
-      {/*  {Array.from({ length: 4 }).map((_, i) => (
-        <Instructions key={i}>
-          This is a minimal starter for Nextjs + React-three-fiber and Threejs. Click on the{' '}
-          <span className='text-cyan-200'>atoms nucleus</span> to navigate to the{' '}
-          <span className='text-green-200'>/blob</span> page. OrbitControls are enabled by default. This is a minimal
-        </Instructions>
-      ))} */}
-
       <Scene>
         <Sky360 />
         <Pointer hAngle={345} route='/janela' />
         <Pointer hAngle={305} route='/quarto' />
       </Scene>
+      <Instructions>
+        This project uses Nextjs + React-three-fiber and Threejs. Click on the{' '}
+        <span className='font-bold text-cyan-200'>white pointer</span> to navigate to the{' '}
+        <span className='font-bold text-green-200'>/[dynamic-route]</span> page.
+      </Instructions>
     </>
   )
 }
