@@ -4,7 +4,7 @@ import { OrbitControls, Preload } from '@react-three/drei'
 
 const Scene = forwardRef(function Scene({ children, ...props }, ref) {
   return (
-    <div className='absolute top-0 w-full -translate-x-1/2 left-1/2 md:w-4/5 bg-zinc-800 aspect-video'>
+    <div className='w-full m-auto md:w-4/5 bg-zinc-800 aspect-video'>
       <Canvas ref={ref} {...props}>
         <directionalLight intensity={0.75} />
         <ambientLight intensity={0.75} />
