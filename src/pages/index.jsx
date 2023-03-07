@@ -1,6 +1,7 @@
 import dynamic from 'next/dynamic'
 import Instructions from '@/components/dom/Instructions'
 import Seo from '@/components/dom/SEO'
+import Target from '@/components/canvas/Target'
 
 const Scene = dynamic(() => import('@/components/canvas/Scene'), { ssr: true })
 const Pointer = dynamic(() => import('@/components/canvas/Pointer'), { ssr: false })
@@ -14,7 +15,7 @@ export default function Page() {
       <Scene preloadImage='/360-thumb.jpg'>
         <Sky360 imageUrl='/360.jpg' />
         <Pointer hAngle={345} route='/#test' />
-        <Pointer hAngle={305} route='/quarto' />
+        <Target hAngle={305} route='/quarto' />
       </Scene>
 
       <Instructions id='test'>
