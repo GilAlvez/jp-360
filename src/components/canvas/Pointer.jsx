@@ -19,7 +19,7 @@ export default function Pointer({ route, hAngle = 0, vAngle = 90, radius = 500, 
       position={[x, y, z]}
       {...props}>
       <sphereGeometry args={[10, 64, 64]} />
-      <meshPhysicalMaterial roughness={1} color={hovered ? '#999' : '#fff'} />
+      <meshPhysicalMaterial color={hovered ? '#bbb' : '#fff'} />
     </mesh>
   )
 }
