@@ -2,8 +2,12 @@
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll": true
+    "source.organizeImports": true,
+		"source.fixAll.eslint": true,
+		"source.fixAll.format": true
   },
+  "explorer.compactFolders": false,
+	"workbench.tree.indent": 16,
   "eslint.validate": ["javascript"],
   "eslint.workingDirectories": [{ "mode": "auto" }]
 }
