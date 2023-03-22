@@ -1,11 +1,14 @@
+import Image from 'next/image'
 import { CircleNotch } from 'phosphor-react'
-import React from 'react'
 
-const CanvasLoading = () => {
+const CanvasLoading = ({ src, alt = 'thumb preview' }) => {
   return (
-    <div className='absolute grid w-full h-full place-items-center bg-black/20 backdrop-blur-sm'>
-      <CircleNotch className='animate-spin' alt='carregando' size={32} />
-    </div>
+    <>
+      <Image src={src} alt={alt} fill priority />
+      <div className='absolute w-full h-full bg-stone-900/50 backdrop-blur-sm'>
+        <CircleNotch className='absolute text-white right-8 bottom-8 animate-spin' alt='Carregando' size={32} />
+      </div>
+    </>
   )
 }
 
