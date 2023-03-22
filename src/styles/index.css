@@ -26,7 +26,7 @@ body {
     @apply scrollbar-none;
   }
   body {
-    @apply antialiased transition duration-300 
+    @apply antialiased font-medium transition duration-300 
 		text-stone-900 bg-primary-50 
 		selection:bg-primary-200 selection:text-stone-800;
   }
