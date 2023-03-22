@@ -15,7 +15,7 @@ export default function Page() {
         <Sky360 imageUrl='/3603.jpg' />
       </Hero>
 
-      <div className='h-[80rem] bg-stone-50'></div>
+      <div className='h-[40rem] bg-stone-50'></div>
 
       {/* <Scene preloadImage='/360-thumb.jpg'>
         <Sky360 imageUrl='/360.jpg' />
