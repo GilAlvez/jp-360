@@ -1,11 +1,10 @@
+import Seo from '@/components/dom/Seo'
 import dynamic from 'next/dynamic'
-import Seo from '@/components/dom/SEO'
-import Target from '@/components/canvas/Target'
-import Hero from '@/components/canvas/Hero'
 
-const Scene = dynamic(() => import('@/components/canvas/Scene'), { ssr: true })
-const Pointer = dynamic(() => import('@/components/canvas/Pointer'), { ssr: false })
-const Sky360 = dynamic(() => import('@/components/canvas/Sky360'), { ssr: true })
+const Scene = dynamic(() => import('@/components/canvas/Environments/Scene'), { ssr: true })
+const Pointer = dynamic(() => import('@/components/canvas/Elements/Pointer'), { ssr: false })
+const Hero = dynamic(() => import('@/components/canvas/Environments/Hero'), { ssr: true })
+const Sky360 = dynamic(() => import('@/components/canvas/Environments/Sky360'), { ssr: true })
 
 export default function Page() {
   return (
@@ -15,6 +14,8 @@ export default function Page() {
       <Hero preloadImage='/360-thumb.jpg'>
         <Sky360 imageUrl='/3603.jpg' />
       </Hero>
+
+      <div className='h-[80rem] bg-stone-50'></div>
 
       {/* <Scene preloadImage='/360-thumb.jpg'>
         <Sky360 imageUrl='/360.jpg' />
