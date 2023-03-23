@@ -21,14 +21,14 @@ body {
   }
   body {
     @apply antialiased font-medium transition duration-300 
-		text-stone-900 bg-primary-50 
+		text-stone-900 bg-stone-50 
 		selection:bg-primary-200 selection:text-stone-800;
   }
 }
 
 @layer components {
   .app-container {
-    @apply px-5 md:px-16 lg:px-24 xl:px-32 2xl:px-56 3xl:px-80;
+    @apply px-5 md:px-16 lg:px-24 xl:px-32 2xl:px-56 3xl:px-72;
   }
 
   .scrollbar-none::-webkit-scrollbar {
