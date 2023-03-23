@@ -1,0 +1,264 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  // BASE
+  .btn {
+    @apply inline-flex
+    shrink-0
+    flex-nowrap
+    whitespace-nowrap
+    cursor-pointer
+    select-none
+    items-center
+    justify-center
+    gap-3
+    text-center
+		uppercase
+    border
+    rounded-sm
+    transition-all
+    duration-300
+    no-underline
+    outline-none
+		outline-offset-0
+		border-transparent 
+    active:transition-none
+		active:outline 
+		disabled:pointer-events-none 
+		disabled:cursor-default;
+  }
+
+  // PRIMARY
+  .btn-primary.btn-filled {
+    @apply text-white
+		bg-primary-500 
+		hover:bg-primary-600
+		focus-visible:bg-primary-600
+		active:bg-primary-500 
+		active:outline-primary-400/30;
+  }
+  .btn-primary.btn-outlined {
+    @apply text-primary-500
+		bg-transparent
+		border-primary-500
+		hover:bg-primary-500/5
+		focus-visible:bg-primary-500/5
+		active:outline-primary-400/30;
+  }
+  .btn-primary.btn-text {
+    @apply text-primary-500
+		bg-transparent
+		hover:bg-primary-500/10
+		focus-visible:bg-primary-500/10
+		active:outline-primary-400/20;
+  }
+
+  // SUCCESS
+  .btn-success.btn-filled {
+    @apply text-white
+		bg-green-500 
+		hover:bg-green-600
+		focus-visible:bg-green-600
+		active:bg-green-500 
+		active:outline-green-400/30;
+  }
+  .btn-success.btn-outlined {
+    @apply text-green-500
+		bg-transparent
+		border-green-500
+		hover:bg-green-500/5
+		focus-visible:bg-green-500/5
+		active:outline-green-400/30;
+  }
+  .btn-success.btn-text {
+    @apply text-green-500
+		bg-transparent
+		hover:bg-green-500/10
+		focus-visible:bg-green-500/10
+		active:outline-green-400/20;
+  }
+
+  // ERROR
+  .btn-error.btn-filled {
+    @apply text-white
+		bg-red-500 
+		hover:bg-red-600
+		focus-visible:bg-red-600
+		active:bg-red-500 
+		active:outline-red-400/30;
+  }
+  .btn-error.btn-outlined {
+    @apply text-red-500
+		bg-transparent
+		border-red-500
+		hover:bg-red-500/5
+		focus-visible:bg-red-500/5
+		active:outline-red-400/30;
+  }
+  .btn-error.btn-text {
+    @apply text-red-500
+		bg-transparent
+		hover:bg-red-500/10
+		focus-visible:bg-red-500/10
+		active:outline-red-400/20;
+  }
+
+  // WARNING
+  .btn-warning.btn-filled {
+    @apply text-white
+		bg-amber-500 
+		hover:bg-amber-600
+		focus-visible:bg-amber-600
+		active:bg-amber-500 
+		active:outline-amber-400/30;
+  }
+  .btn-warning.btn-outlined {
+    @apply text-amber-500
+		bg-transparent
+		border-amber-500
+		hover:bg-amber-500/5
+		focus-visible:bg-amber-500/5
+		active:outline-amber-400/30;
+  }
+  .btn-warning.btn-text {
+    @apply text-amber-500
+		bg-transparent
+		hover:bg-amber-500/10
+		focus-visible:bg-amber-500/10
+		active:outline-amber-400/20;
+  }
+
+  // INFO
+  .btn-info.btn-filled {
+    @apply text-white
+		bg-blue-500 
+		hover:bg-blue-600
+		focus-visible:bg-blue-600
+		active:bg-blue-500 
+		active:outline-blue-400/30;
+  }
+  .btn-info.btn-outlined {
+    @apply text-blue-500
+		bg-transparent
+		border-blue-500
+		hover:bg-blue-500/5
+		focus-visible:bg-blue-500/5
+		active:outline-blue-400/30;
+  }
+  .btn-info.btn-text {
+    @apply text-blue-500
+		bg-transparent
+		hover:bg-blue-500/10
+		focus-visible:bg-blue-500/10
+		active:outline-blue-400/20;
+  }
+
+  // NEUTRAL
+  .btn-neutral.btn-filled {
+    @apply text-white
+		bg-zinc-500 
+		hover:bg-zinc-600
+		focus-visible:bg-zinc-600
+		active:bg-zinc-500 
+		active:outline-zinc-400/30;
+  }
+  .btn-neutral.btn-outlined {
+    @apply text-zinc-500
+		bg-transparent
+		border-zinc-500
+		hover:bg-zinc-500/5
+		focus-visible:bg-zinc-500/5
+		active:outline-zinc-400/30;
+  }
+  .btn-neutral.btn-text {
+    @apply text-zinc-500
+		bg-transparent
+		hover:bg-zinc-500/10
+		focus-visible:bg-zinc-500/10
+		active:outline-zinc-400/20;
+  }
+
+  // DARK
+  .btn-dark.btn-filled {
+    @apply text-white
+		bg-zinc-900 
+		hover:bg-zinc-800
+		focus-visible:bg-zinc-800
+		active:bg-zinc-900 
+		active:outline-zinc-400/30;
+  }
+  .btn-dark.btn-outlined {
+    @apply text-zinc-900
+		bg-transparent
+		border-zinc-900
+		hover:bg-zinc-900/5
+		focus-visible:bg-zinc-900/5
+		active:outline-zinc-400/30;
+  }
+  .btn-dark.btn-text {
+    @apply text-zinc-900
+		bg-transparent
+		hover:bg-zinc-900/10
+		focus-visible:bg-zinc-900/10
+		active:outline-zinc-400/20;
+  }
+
+  // LIGHT
+  .btn-light.btn-filled {
+    @apply text-zinc-900
+		bg-white
+		hover:bg-zinc-50
+		focus-visible:bg-zinc-50
+		active:bg-white
+		active:outline-zinc-50/30;
+  }
+  .btn-light.btn-outlined {
+    @apply text-white
+		bg-transparent
+		border-white
+		hover:bg-white/5
+		focus-visible:bg-white/5
+		active:outline-zinc-50/30;
+  }
+  .btn-light.btn-text {
+    @apply text-white
+		bg-transparent
+		hover:bg-white/10
+		focus-visible:bg-white/10
+		active:outline-white/20;
+  }
+
+  // DISABLED
+  .btn.btn-filled {
+    @apply disabled:bg-zinc-200 
+		disabled:text-zinc-400;
+  }
+  .btn.btn-outlined {
+    @apply disabled:bg-zinc-300/10
+		disabled:text-zinc-400/60
+		disabled:border-zinc-400/10;
+  }
+  .btn.btn-text {
+    @apply disabled:text-zinc-400/60 
+		disabled:bg-zinc-100;
+  }
+
+  // SIZES
+  .btn-xs {
+    @apply h-7 px-2 text-xs;
+  }
+  .btn-sm {
+    @apply h-9 px-4 text-sm;
+  }
+  .btn-md {
+    @apply h-11 px-6;
+  }
+  .btn-lg {
+    @apply h-12 px-8 text-lg;
+  }
+  .btn-xl {
+    @apply h-14 px-10 text-xl;
+  }
+}
