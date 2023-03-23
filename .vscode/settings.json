@@ -1,13 +1,23 @@
 {
-  "editor.formatOnPaste": true,
+  "editor.tabSize": 2,
+  "editor.tabCompletion": "on",
   "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.codeActionsOnSave": {
     "source.organizeImports": true,
-		"source.fixAll.eslint": true,
-		"source.fixAll.format": true
+    "source.fixAll.eslint": true,
+    "source.fixAll.format": true
   },
   "explorer.compactFolders": false,
-	"workbench.tree.indent": 16,
+  "workbench.tree.indent": 16,
   "eslint.validate": ["javascript"],
-  "eslint.workingDirectories": [{ "mode": "auto" }]
+  "eslint.workingDirectories": [{ "mode": "auto" }],
+  "css.validate": false,
+  "scss.validate": false,
+  "less.validate": false,
+  "tailwindCSS.validate": true,
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }

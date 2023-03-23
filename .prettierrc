@@ -15,5 +15,10 @@
   "tabWidth": 2,
   "trailingComma": "all",
   "useTabs": false,
-  "vueIndentScriptAndStyle": false
+  "vueIndentScriptAndStyle": false,
+  "scss": {
+    "singleQuote": true,
+    "tabWidth": 2,
+    "useTabs": false
+  }
 }
