@@ -3,15 +3,9 @@
 @tailwind utilities;
 
 html {
-  font-size: 16px;
   text-rendering: optimizeLegibility;
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
-}
-@media (max-width: 768px) {
-  html {
-    font-size: 14px;
-  }
 }
 
 body {
@@ -23,7 +17,7 @@ body {
     @apply m-0 p-0 box-border;
   }
   html {
-    @apply scrollbar-none;
+    @apply text-[14px] md:text-[16px] 3xl:text-[18px] scrollbar-none;
   }
   body {
     @apply antialiased font-medium transition duration-300 
@@ -34,7 +28,7 @@ body {
 
 @layer components {
   .app-container {
-    @apply px-5 md:px-16 lg:px-24 xl:px-32 2xl:px-56 3xl:px-96;
+    @apply px-5 md:px-16 lg:px-24 xl:px-32 2xl:px-56 3xl:px-80;
   }
 
   .scrollbar-none::-webkit-scrollbar {
