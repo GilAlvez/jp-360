@@ -18,7 +18,7 @@ export function HeaderMobile() {
       )}
 
       {open && (
-        <div className='z-40 absolute h-[calc(100vh_-_5rem)] top-20 right-0 w-screen'>
+        <div className='z-40 absolute h-[calc(100vh_-_4rem)] top-16 right-0 w-screen'>
           <section className='absolute right-0 z-50 flex flex-col justify-between w-full h-full gap-8 p-10 pb-20 transition bg-black/50 md:hidden'>
             <NavLinks onClick={() => setOpen(false)} />
           </section>

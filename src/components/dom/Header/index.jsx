@@ -17,7 +17,7 @@ const Header = () => {
     <>
       <div className='sticky top-0 z-50'>
         <header
-          className={`app-container absolute inset-0 flex items-center justify-between h-20 gap-12 text-white backdrop-blur-[1px] transition-all duration-300 ${
+          className={`app-container absolute inset-0 flex items-center justify-between h-16 gap-12 text-white backdrop-blur-[1px] transition-all duration-300 ${
             scrollPosition > 0 ? 'bg-stone-800 ' : 'bg-black/50'
           }`}>
           <HeaderDesktop />
