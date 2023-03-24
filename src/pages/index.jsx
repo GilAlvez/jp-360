@@ -1,5 +1,6 @@
 import CanvasLoading from '@/components/dom/CanvasLoading'
 import { GalerySection } from '@/components/dom/Sections/Galery'
+import { NewsSection } from '@/components/dom/Sections/News'
 import Seo from '@/components/dom/Seo'
 import dynamic from 'next/dynamic'
 
@@ -32,7 +33,7 @@ export default function Page() {
 
       <GalerySection />
 
-      <div className='h-[40rem] bg-stone-50'></div>
+      <NewsSection />
 
       {/* <Scene preloadImage='/360-thumb.jpg'>
         <Sky360 imageUrl='/360.jpg' />
