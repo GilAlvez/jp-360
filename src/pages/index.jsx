@@ -1,4 +1,5 @@
 import CanvasLoading from '@/components/dom/CanvasLoading'
+import { CreatorsSection } from '@/components/dom/Sections/Creators'
 import { GalerySection } from '@/components/dom/Sections/Galery'
 import { NewsSection } from '@/components/dom/Sections/News'
 import Seo from '@/components/dom/Seo'
@@ -34,6 +35,8 @@ export default function Page() {
       <GalerySection />
 
       <NewsSection />
+
+      <CreatorsSection />
 
       {/* <Scene preloadImage='/360-thumb.jpg'>
         <Sky360 imageUrl='/360.jpg' />

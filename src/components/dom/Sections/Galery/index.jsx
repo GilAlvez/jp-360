@@ -123,7 +123,7 @@ export const GalerySection = () => {
   }, [fullGaleryList, width])
 
   return (
-    <section className='py-24 app-container'>
+    <section className='py-24 bg-white app-container'>
       <h2>Galeria</h2>
 
       <div className='grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
