@@ -3,10 +3,10 @@ import Link from 'next/link'
 const NavLinks = (props) => {
   const { className, onClick } = props
   const menuLinks = [
-    { label: 'Inicio', url: '/' },
+    { label: 'Inicio', url: '/#hero' },
     { label: 'Galeria', url: '/#galeria' },
     { label: 'Noticias', url: '/#noticias' },
-    { label: 'Contato', url: '/#contato' },
+    { label: 'Contato', url: '/#idealizadores' },
   ]
   return (
     <nav className={className}>
