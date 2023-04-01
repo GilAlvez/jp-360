@@ -2,7 +2,7 @@ import { OrbitControls } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
 import { Suspense, forwardRef } from 'react'
 
-const Hero = forwardRef(function Hero({ children, preloadImage, ...props }, ref) {
+const Hero = forwardRef(function Hero({ children, ...props }, ref) {
   return (
     <Canvas ref={ref} {...props}>
       <Suspense fallback={null}>
