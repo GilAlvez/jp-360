@@ -3,14 +3,20 @@ import { Legals } from './legals'
 
 import { Socials } from './socials'
 
-const Footer = ({ columns, logoUrl, description, legals, copyright, socials, shortand, ...rest }) => {
+const Footer = ({ columns, logoUrl, description, legals, copyright, socials, shortand, hidden = false, ...rest }) => {
   return (
     <>
       {shortand ? (
-        copyright && <footer className='py-3 text-center app-container text-stone-400 bg-stone-900'>{copyright}</footer>
+        copyright && (
+          <footer className={`py-3 text-center app-container text-stone-400 bg-stone-900 ${hidden && 'hidden'}`}>
+            {copyright}
+          </footer>
+        )
       ) : (
         <>
-          <footer className='flex flex-col gap-4 pt-10 pb-4 mt-auto app-container bg-stone-800' {...rest}>
+          <footer
+            className={`flex flex-col gap-4 pt-10 pb-4 mt-auto app-container bg-stone-800 ${hidden && 'hidden'}`}
+            {...rest}>
             <div className='flex flex-col gap-4 lg:gap-8 lg:flex-row'>
               <div className='flex flex-col gap-4 text-gray-100 md:w-full'>
                 {logoUrl && (
@@ -51,7 +57,10 @@ const Footer = ({ columns, logoUrl, description, legals, copyright, socials, sho
           </footer>
 
           {copyright && (
-            <footer className='py-3 text-sm text-center app-container text-stone-400 bg-stone-900'>{copyright}</footer>
+            <footer
+              className={`py-3 text-sm text-center app-container text-stone-400 bg-stone-900 ${hidden && 'hidden'}`}>
+              {copyright}
+            </footer>
           )}
         </>
       )}
