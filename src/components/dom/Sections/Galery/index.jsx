@@ -123,8 +123,11 @@ export const GalerySection = () => {
   }, [fullGaleryList, width])
 
   return (
-    <section className='py-24 bg-white app-container'>
-      <h2>Galeria</h2>
+    <section id='galeria' className='py-20 bg-white app-container'>
+      <div className='mb-5'>
+        <h2 className='text-3xl font-bold xl:text-4xl'>Galeria</h2>
+        <div className='w-24 h-1 rounded-full bg-primary-500'></div>
+      </div>
 
       <div className='grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
         {galeryList.map(({ name, link, imageUrl }) => {

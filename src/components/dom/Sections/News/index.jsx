@@ -46,8 +46,11 @@ export const NewsSection = () => {
   }, [fullNewsList, width])
 
   return (
-    <section className='py-24 app-container'>
-      <h2>Notícias</h2>
+    <section id='noticias' className='py-20 bg-stone-50 app-container'>
+      <div className='mb-5'>
+        <h2 className='text-3xl font-bold xl:text-4xl'>Notícias</h2>
+        <div className='w-24 h-1 rounded-full bg-primary-500'></div>
+      </div>
 
       <div className='grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3'>
         {newsList.map(({ title, subtitle, link, imageUrl }) => {
