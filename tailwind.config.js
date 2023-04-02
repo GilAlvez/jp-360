@@ -1,3 +1,5 @@
+const { FALSE } = require('sass')
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   mode: 'jit',
@@ -23,5 +25,14 @@ module.exports = {
       },
     },
   },
-  plugins: [require('@tailwindcss/line-clamp')],
+  plugins: [require('@tailwindcss/line-clamp'), require('daisyui')],
+  daisyui: {
+    styled: true,
+    themes: false,
+    base: false,
+    utils: false,
+    logs: false,
+    rtl: false,
+    prefix: 'd-',
+  },
 }
