@@ -46,7 +46,7 @@ export const NewsSection = () => {
   }, [fullNewsList, width])
 
   return (
-    <section id='noticias' className='py-20 bg-stone-50 app-container'>
+    <section id='noticias' className='pb-20 pt-20 md:pt-14 bg-stone-50 app-container'>
       <div className='mb-5'>
         <h2 className='text-3xl font-bold xl:text-4xl'>Notícias</h2>
         <div className='w-24 h-1 rounded-full bg-primary-500'></div>

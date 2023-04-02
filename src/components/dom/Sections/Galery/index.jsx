@@ -123,7 +123,7 @@ export const GalerySection = () => {
   }, [fullGaleryList, width])
 
   return (
-    <section id='galeria' className='py-20 bg-white app-container'>
+    <section id='galeria' className='pb-20 pt-20 md:pt-14 bg-white app-container'>
       <div className='mb-5'>
         <h2 className='text-3xl font-bold xl:text-4xl'>Galeria</h2>
         <div className='w-24 h-1 rounded-full bg-primary-500'></div>
