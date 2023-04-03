@@ -68,64 +68,19 @@ export const GalerySection = () => {
         link: '/#test',
         imageUrl: '/360-thumb.jpg',
       },
-      {
-        name: 'lugar13',
-        link: '/#test',
-        imageUrl: '/360-thumb.jpg',
-      },
-      {
-        name: 'lugar14',
-        link: '/#test',
-        imageUrl: '/360-thumb.jpg',
-      },
-      {
-        name: 'lugar15',
-        link: '/#test',
-        imageUrl: '/360-thumb.jpg',
-      },
-      {
-        name: 'lugar16',
-        link: '/#test',
-        imageUrl: '/360-thumb.jpg',
-      },
-      {
-        name: 'lugar17',
-        link: '/#test',
-        imageUrl: '/360-thumb.jpg',
-      },
-      {
-        name: 'lugar18',
-        link: '/#test',
-        imageUrl: '/360-thumb.jpg',
-      },
-      {
-        name: 'lugar19',
-        link: '/#test',
-        imageUrl: '/360-thumb.jpg',
-      },
-      {
-        name: 'lugar20',
-        link: '/#test',
-        imageUrl: '/360-thumb.jpg',
-      },
-      {
-        name: 'lugar21',
-        link: '/#test',
-        imageUrl: '/360-thumb.jpg',
-      },
     ],
     [],
   )
 
   useEffect(() => {
-    const itemsToShow = width < 768 ? 2 : 12
+    const itemsToShow = width < 768 ? 2 : 8
     setGaleryList(fullGaleryList.slice(0, itemsToShow))
   }, [fullGaleryList, width])
 
   return (
-    <section id='galeria' className='pb-20 pt-20 md:pt-14 bg-white app-container'>
+    <section id='galeria' className='pt-20 pb-20 bg-white md:pt-14 app-container'>
       <div className='mb-5'>
-        <h2 className='text-3xl font-bold xl:text-4xl'>Galeria</h2>
+        <h2 className='text-3xl font-bold xl:text-4xl'>Ambientes 360</h2>
         <div className='w-24 h-1 rounded-full bg-primary-500'></div>
       </div>
 

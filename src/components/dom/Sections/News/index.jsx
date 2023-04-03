@@ -9,30 +9,23 @@ export const NewsSection = () => {
   const fullNewsList = useMemo(
     () => [
       {
-        title: 'Titulo Noticia1',
+        title: 'Centro Cultural São Francisco está aberto para visitações',
         subtitle:
-          'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam quibusdam molestias, magni, quis fuga blanditiis provident accusamus iure perspiciatis odit est quos delectus odio, nisi earum voluptatum officiis? Quas, sint!',
+          'A beleza do complexo arquitetônico da Igreja de São Francisco, centro histórico de João Pessoa, está à disposição dos visitantes. Mesmo com medidas restritivas, é possível fazer um passeio pelo ponto inicial da capital paraibana, que nasceu ao redor do imponente cruzeiro, cartão de visita para quem chega.',
         link: '/#test',
         imageUrl: '/360-thumb.jpg',
       },
       {
-        title: 'Titulo Noticia2',
+        title: 'Centro Cultural São Francisco: aula sobre história e arte, em João Pessoa',
         subtitle:
-          'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam quibusdam molestias, magni, quis fuga blanditiis provident accusamus iure perspiciatis odit est quos delectus odio, nisi earum voluptatum officiis? Quas, sint!',
+          'O Centro Cultural São Francisco é um exemplo de como a arte e a cultura podem ser preservadas e valorizadas em meio a um mundo em constante mudança. Através de seu patrimônio arquitetônico e artístico, o centro cultural continua a inspirar e encantar visitantes de todo o mundo.',
         link: '/#test',
         imageUrl: '/360-thumb.jpg',
       },
       {
-        title: 'Titulo Noticia3',
+        title: 'Espetáculo da Paixão de Cristo será no Centro Cultural São Francisco',
         subtitle:
-          'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam quibusdam molestias, magni, quis fuga blanditiis provident accusamus iure perspiciatis odit est quos delectus odio, nisi earum voluptatum officiis? Quas, sint!',
-        link: '/#test',
-        imageUrl: '/360-thumb.jpg',
-      },
-      {
-        title: 'Titulo Noticia4',
-        subtitle:
-          'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam quibusdam molestias, magni, quis fuga blanditiis provident accusamus iure perspiciatis odit est quos delectus odio, nisi earum voluptatum officiis? Quas, sint!',
+          'O diretor executivo da Fundação Cultural de João Pessoa (Funjope), Marcus Alves, e o coordenador do Centro Cultural São Francisco, padre Marcondes Menezes, se reuniram, nesta quinta-feira (2), para alinhar os últimos ajustes da apresentação da peça Paixão de Cristo. O evento será entre os dias 6 e 9 de abril, no adro da Igreja de São Francisco, no Centro da Capital. O edital para seleção de elenco está aberto.',
         link: '/#test',
         imageUrl: '/360-thumb.jpg',
       },
@@ -46,7 +39,7 @@ export const NewsSection = () => {
   }, [fullNewsList, width])
 
   return (
-    <section id='noticias' className='pb-20 pt-20 md:pt-14 bg-stone-50 app-container'>
+    <section id='noticias' className='pt-20 pb-20 md:pt-14 bg-stone-50 app-container'>
       <div className='mb-5'>
         <h2 className='text-3xl font-bold xl:text-4xl'>Notícias</h2>
         <div className='w-24 h-1 rounded-full bg-primary-500'></div>

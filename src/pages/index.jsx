@@ -26,10 +26,8 @@ export default function HomePage() {
 
         <section className='absolute inset-0 flex flex-col items-center justify-center gap-8'>
           <div className='px-5 text-center text-white md:w-1/2'>
-            <h1 className='mb-4'>Titulo Principal</h1>
-            <p className='text-xl'>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium recusandae nulla non.
-            </p>
+            <h1 className='mb-4'>Passeio Cultural</h1>
+            <p className='text-xl'>Viva a experiência de estar em um dos centros culturais mais incríveis do Brasil.</p>
           </div>
           <Link className='btn btn-primary btn-filled btn-xl' href='/local/pagina-interna'>
             Visitar

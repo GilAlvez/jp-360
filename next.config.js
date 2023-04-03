@@ -13,7 +13,9 @@ const nextConfig = {
   //   styledComponents: true,
   // },
   experimental: {},
-  images: {},
+  images: {
+    domains: ['media.licdn.com'],
+  },
   reactStrictMode: true, // Recommended for the `pages` directory, default in `app`.
   webpack(config, { isServer }) {
     // audio support

@@ -8,7 +8,7 @@ export default function NewsCard({ title, subtitle, link, imageUrl }) {
       </figure>
 
       <div className='flex flex-col gap-2 p-6'>
-        <h5>{title}</h5>
+        <h6>{title}</h6>
         <p className='text-sm line-clamp-2 text-stone-700'>{subtitle}</p>
         <a href={link} className='self-end mt-2 btn btn-primary btn-sm btn-text'>
           Leia Mais
