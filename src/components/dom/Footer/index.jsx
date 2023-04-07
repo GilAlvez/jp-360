@@ -17,14 +17,17 @@ export default function Footer({ hidden = false, short = false }) {
   return (
     <div className='mt-auto'>
       {!short && (
-        <footer className={`py-8 app-container d-footer bg-stone-800 text-stone-100 ${hidden && 'hidden'}`}>
-          <div className='w-1/2'>
-            <picture className='relative h-32 w-44'>
+        <footer
+          className={`py-8 app-container place-items-baseline d-footer bg-stone-800 text-stone-100 ${
+            hidden && 'hidden'
+          }`}>
+          <div>
+            <picture className='relative w-40 h-24'>
               <Image src='/LogoWhite.svg' alt='Logo' fill priority />
             </picture>
-            <p className='text-sm'>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi quidem blanditiis libero placeat sit id
-              error itaque provident suscipit minima, vero nihil alias.
+            <p className='max-w-sm text-sm'>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem dolore eligendi quo blanditiis, accusamus
+              cumque veritatis vero at dolor, velit numquam amet ea dolorum?
             </p>
           </div>
           {columns.map((col) => (
