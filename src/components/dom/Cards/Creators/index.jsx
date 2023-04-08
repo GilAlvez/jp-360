@@ -10,11 +10,11 @@ export const CreatorCard = ({ name, role, bio, imageSrc, socialLinks }) => {
         <h4 className='text-stone-800'>{name}</h4>
         <h6 className='mb-1 text-lg font-normal text-stone-500'>{role}</h6>
         <p className='text-sm text-stone-700 line-clamp-4'>{bio}</p>
-        <ul className='flex mt-3'>
+        <ul className='flex gap-2 mt-3'>
           {socialLinks.map((link) => {
             const Icon = link.icon
             return (
-              <li key={link.href} className='mr-4'>
+              <li key={link.href}>
                 <a href={link.href} target='_blank' rel='noopener noreferrer'>
                   <Icon className='text-2xl hover:text-primary-900 ' />
                 </a>
