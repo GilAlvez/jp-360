@@ -1,12 +1,12 @@
 import useWindowSize from '@/hooks/useWindowSize'
 import { useEffect, useMemo, useState } from 'react'
-import GaleryCard from '../../Cards/Galery'
+import { EnviromentCard } from '../../Cards/Enviroments'
 
-export const GalerySection = () => {
-  const [galeryList, setGaleryList] = useState([])
+export const EnviromentsSection = () => {
+  const [enviromentsList, setEnviromentsList] = useState([])
   const { width } = useWindowSize()
 
-  const fullGaleryList = useMemo(
+  const fullEnviromentsList = useMemo(
     () => [
       {
         name: 'lugar1',
@@ -74,29 +74,29 @@ export const GalerySection = () => {
 
   useEffect(() => {
     const itemsToShow = width < 768 ? 2 : 8
-    setGaleryList(fullGaleryList.slice(0, itemsToShow))
-  }, [fullGaleryList, width])
+    setEnviromentsList(fullEnviromentsList.slice(0, itemsToShow))
+  }, [fullEnviromentsList, width])
 
   return (
-    <section id='galeria' className='pt-20 pb-20 bg-white md:pt-14 app-container'>
+    <section id='ambientes' className='pt-20 pb-20 bg-white md:pt-14 app-container'>
       <div className='mb-5'>
         <h2 className='text-3xl font-bold xl:text-4xl'>Ambientes 360</h2>
         <div className='w-24 h-1 rounded-full bg-primary-500'></div>
       </div>
 
       <div className='grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
-        {galeryList.map(({ name, link, imageUrl }) => {
-          return <GaleryCard key={name} name={name} link={link} imageUrl={imageUrl} />
+        {enviromentsList.map(({ name, link, imageUrl }) => {
+          return <EnviromentCard key={name} name={name} link={link} imageUrl={imageUrl} />
         })}
       </div>
 
-      {galeryList.length < fullGaleryList.length && (
+      {enviromentsList.length < fullEnviromentsList.length && (
         <div className='grid place-items-center'>
           <button
             className='w-full mt-4 md:w-min btn btn-primary btn-md btn-filled'
             onClick={() => {
-              const itemsToShow = Math.min(galeryList.length + (width < 768 ? 2 : 4), fullGaleryList.length)
-              setGaleryList(fullGaleryList.slice(0, itemsToShow))
+              const itemsToShow = Math.min(enviromentsList.length + (width < 768 ? 2 : 4), fullEnviromentsList.length)
+              setEnviromentsList(fullEnviromentsList.slice(0, itemsToShow))
             }}>
             Mostrar Mais
           </button>

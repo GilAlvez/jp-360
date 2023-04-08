@@ -4,7 +4,7 @@ const NavLinks = (props) => {
   const { className, onClick } = props
   const menuLinks = [
     { label: 'Inicio', url: '/#hero' },
-    { label: 'Ambientes', url: '/#galeria' },
+    { label: 'Ambientes', url: '/#ambientes' },
     { label: 'Noticias', url: '/#noticias' },
     { label: 'Contato', url: '/#idealizadores' },
   ]
