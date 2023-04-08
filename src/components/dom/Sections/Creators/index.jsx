@@ -1,5 +1,5 @@
 import { CreatorCard } from '@/components/dom/Cards/Creators'
-import { LinkedinLogo } from 'phosphor-react'
+import { InstagramLogo, LinkedinLogo, WhatsappLogo } from 'phosphor-react'
 
 export const CreatorsSection = () => {
   const creators = [
@@ -8,8 +8,12 @@ export const CreatorsSection = () => {
       imageUrl:
         'https://media.licdn.com/dms/image/C4D03AQHnDL9GOO-m8w/profile-displayphoto-shrink_800_800/0/1653821693456?e=1686182400&v=beta&t=tM2ZbbvXJKs0h60wDxPsSdORJdsrEjEHi_uF6h6VD4g',
       role: 'Desenvolvedor',
-      bio: 'asjfnasfasnfas',
-      socialLinks: [{ href: 'https://www.linkedin.com/in/gildson-alves/', icon: LinkedinLogo }],
+      bio: 'Um desenvolvedor é um profissional responsável por criar, projetar e manter websites e aplicações web, trabalhando com tecnologias de interface, lógica de negócios e gerenciamento de banco de dados, garantindo a funcionalidade e a experiência do usuário.',
+      socialLinks: [
+        { href: 'https://www.linkedin.com/in/gildson-alves/', icon: LinkedinLogo },
+        { href: 'https://www.instagram.com/gildson.a/', icon: InstagramLogo },
+        { href: 'https://api.whatsapp.com/send?phone=+5584996641112&text=Oi%20Gildson', icon: WhatsappLogo },
+      ],
     },
     {
       name: 'Jośe Matheus',
