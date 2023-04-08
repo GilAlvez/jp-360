@@ -6,8 +6,9 @@ import { EnviromentCard } from '@/components/dom/Cards/Enviroments'
 import Seo from '@/components/dom/Seo'
 import { Text } from '@/components/dom/Text'
 
+const Scene = dynamic(() => import('@/components/canvas/Environments/Scene'), { ssr: true })
 const Sky360 = dynamic(() => import('@/components/canvas/Environments/Sky360'), { ssr: true })
-const Target = dynamic(() => import('@/components/canvas/Elements/Target'), { ssr: false })
+const Target = dynamic(() => import('@/components/canvas/Elements/Target'), { ssr: true })
 
 export default function LocalPage() {
   const route = useRouter()
@@ -42,10 +43,10 @@ export default function LocalPage() {
         id='local'
         className='w-full relative aspect-[1_/_2] sm:aspect-square md:aspect-[21_/_10] 3xl:aspect-[21_/_9]'>
         <CanvasLoading src='/360-thumb.jpg' />
-
-        <Sky360 imageUrl='/360.jpg'>
+        <Scene type='enviroment'>
+          <Sky360 imageUrl='/360.jpg' />
           <Target hAngle={305} route={`/local/${route.query.local}/item/item-qualquer`} />
-        </Sky360>
+        </Scene>
       </main>
 
       <section className='flex flex-col lg:flex-row gap-7 py-14 app-container'>

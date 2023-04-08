@@ -2,8 +2,8 @@ import Seo from '@/components/dom/Seo'
 import dynamic from 'next/dynamic'
 import { useRouter } from 'next/router'
 
-const Model = dynamic(() => import('@/components/canvas/Environments/Model'), { ssr: true })
-// const Target = dynamic(() => import('@/components/canvas/Elements/Target'), { ssr: false })
+const Scene = dynamic(() => import('@/components/canvas/Environments/Scene'), { ssr: true })
+const Datsun = dynamic(() => import('@/components/canvas/Models/Datsun'), { ssr: true })
 
 export default function ItemPage() {
   const route = useRouter()
@@ -89,7 +89,9 @@ export default function ItemPage() {
       <div className='flex flex-grow h-[calc(100vh_-_10rem)] '>
         {/* Página Dinamica do Item Clicado: {`{${route.query.item}}`} */}
         <main id='local' className='relative w-2/3'>
-          <Model />
+          <Scene type='model' shadows dpr={[1, 2]} camera={{ position: [0, 0, 150], fov: 40 }}>
+            <Datsun />
+          </Scene>
         </main>
 
         <section className='flex items-center flex-grow w-1/3 bg-white'>

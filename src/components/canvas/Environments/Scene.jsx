@@ -1,25 +1,71 @@
 import { OrbitControls } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
-import { forwardRef } from 'react'
+import { Suspense } from 'react'
 
-const Scene = forwardRef(function Scene({ children, ...props }, ref) {
+export default function Scene({ children, type = 'free', ref, ...props }) {
+  const controls =
+    type === 'free'
+      ? {
+          target: [0, 0, 0],
+          enableZoom: true,
+          enablePan: true,
+          enableRotate: true,
+          enableDamping: true,
+          rotateSpeed: 0.25,
+          dampingFactor: 0.05,
+        }
+      : type === 'auto-rotate'
+      ? {
+          target: [0, 0, 0],
+          enableZoom: false,
+          enablePan: false,
+          enableRotate: false,
+          autoRotate: true,
+          autoRotateSpeed: 0.25,
+        }
+      : type === 'enviroment'
+      ? {
+          target: [0, 0, 0],
+          enableZoom: false,
+          enablePan: false,
+          enableRotate: true,
+          enableDamping: true,
+          rotateSpeed: 0.25,
+          dampingFactor: 0.05,
+        }
+      : type === 'model'
+      ? {
+          target: [0, 0, 0],
+          enableZoom: false,
+          enablePan: false,
+          enableRotate: true,
+          enableDamping: true,
+          autoRotate: true,
+          autoRotateSpeed: 0.25,
+          rotateSpeed: 0.25,
+          dampingFactor: 0.05,
+        }
+      : null
+
   return (
     <Canvas ref={ref} {...props}>
-      <directionalLight intensity={0.75} />
-      <ambientLight intensity={0.75} />
+      <Suspense fallback={null}>
+        <directionalLight intensity={0.75} />
+        <ambientLight intensity={0.75} />
 
-      {children}
+        {children}
 
-      <OrbitControls
-        target={[0, 0, 0]}
-        enableZoom={false}
-        enablePan={false}
-        enableDamping={true}
-        rotateSpeed={0.25}
-        dampingFactor={0.05}
-      />
+        <OrbitControls {...controls} />
+      </Suspense>
     </Canvas>
   )
-})
+}
 
-export default Scene
+//  target={[0, 0, 0]}
+//           enableZoom={false}
+//           enablePan={false}
+//           enableRotate={true}
+//           autoRotate={false}
+//           enableDamping={true}
+//           rotateSpeed={0.25}
+//           dampingFactor={0.05}
