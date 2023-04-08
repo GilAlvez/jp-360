@@ -86,15 +86,15 @@ export default function ItemPage() {
     <>
       <Seo />
 
-      <div className='flex flex-grow h-[calc(100vh_-_10rem)] '>
+      <div className='flex flex-col lg:flex-row flex-grow lg:h-[calc(100vh_-_10rem)] '>
         {/* Página Dinamica do Item Clicado: {`{${route.query.item}}`} */}
-        <main id='local' className='relative w-2/3'>
+        <main id='local' className='relative lg:w-2/3'>
           <Scene type='model' shadows dpr={[1, 2]} camera={{ position: [0, 0, 150], fov: 40 }}>
             <Datsun />
           </Scene>
         </main>
 
-        <section className='flex items-center flex-grow w-1/3 bg-white'>
+        <section className='flex items-center flex-grow bg-white lg:w-1/3'>
           <div className='max-h-full overflow-y-auto'>
             <table className='min-w-full divide-y divide-stone-200'>
               <tbody className='bg-white divide-y divide-stone-200'>
