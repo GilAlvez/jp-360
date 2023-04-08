@@ -14,7 +14,7 @@ const nextConfig = {
   // },
   experimental: {},
   images: {
-    domains: ['media.licdn.com'],
+    domains: ['media.licdn.com', 'source.unsplash.com'],
   },
   reactStrictMode: true, // Recommended for the `pages` directory, default in `app`.
   webpack(config, { isServer }) {
