@@ -2,7 +2,9 @@ import Seo from '@/components/dom/Seo'
 import { objectsSpecifications } from '@/data/objects-specifications'
 import dynamic from 'next/dynamic'
 import Image from 'next/image'
+import Link from 'next/link'
 import { useRouter } from 'next/router'
+import { ArrowLeft } from 'phosphor-react'
 import { useEffect, useState } from 'react'
 
 const Scene = dynamic(() => import('@/components/canvas/Environments/Scene'), { ssr: true })
@@ -28,8 +30,14 @@ export default function ItemPage() {
       <Seo />
 
       <div className='flex flex-col lg:flex-row flex-grow lg:h-[calc(100vh_-_10rem)] '>
-        {/* Página Dinamica do Item Clicado: {`{${route.query.item}}`} */}
-        <main id='local' className='relative lg:w-2/3 bg-stone-200'>
+        <main id='local' className='relative aspect-square md:aspect-auto lg:w-2/3 bg-stone-200'>
+          <Link
+            href={`/local/${router.query.local}`}
+            className='absolute z-10 flex items-center gap-1 p-2 pl-4 transition rounded-r-full md:p-3 md:pl-6 top-3 md:top-6 w-fit hover:bg-stone-400/70 bg-stone-300'>
+            <ArrowLeft size={20} weight='regular' />
+            <p className='leading-none'>Voltar</p>
+          </Link>
+
           {object.type === 'model' && (
             <Scene type='model' shadows dpr={[1, 2]} camera={{ position: [0, 0, 0], fov: 40 }}>
               <GenericModel url={object.url} />
