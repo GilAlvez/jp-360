@@ -45,7 +45,7 @@ export default function LocalPage() {
         <CanvasLoading src='/360-thumb.jpg' />
         <Scene type='enviroment'>
           <Sky360 imageUrl='/360.jpg' />
-          <Target hAngle={305} route={`/local/${route.query.local}/item/item-qualquer`} />
+          <Target hAngle={305} route={`/local/${route.query.local}/item/object-slug`} />
         </Scene>
       </main>
 
