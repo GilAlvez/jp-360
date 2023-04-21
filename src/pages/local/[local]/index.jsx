@@ -5,13 +5,15 @@ import CanvasLoading from '@/components/dom/CanvasLoading'
 import { EnviromentCard } from '@/components/dom/Cards/Enviroments'
 import Seo from '@/components/dom/Seo'
 import { Text } from '@/components/dom/Text'
+import Link from 'next/link'
+import { ArrowLeft } from 'phosphor-react'
 
 const Scene = dynamic(() => import('@/components/canvas/Environments/Scene'), { ssr: true })
 const Sky360 = dynamic(() => import('@/components/canvas/Environments/Sky360'), { ssr: true })
 const Target = dynamic(() => import('@/components/canvas/Elements/Target'), { ssr: true })
 
 export default function LocalPage() {
-  const route = useRouter()
+  const router = useRouter()
   const otherEnviroments = [
     {
       name: 'lugar1',
@@ -41,11 +43,17 @@ export default function LocalPage() {
 
       <main
         id='local'
-        className='w-full relative aspect-[1_/_2] sm:aspect-square md:aspect-[21_/_10] 3xl:aspect-[21_/_9]'>
+        className='w-full max-h-[calc(100vh_-_7rem)] relative aspect-[1_/_2] sm:aspect-square md:aspect-[21_/_10] 3xl:aspect-[21_/_9]'>
+        <Link
+          href='/'
+          className='absolute z-10 flex items-center gap-1 p-2 pl-4 transition rounded-r-full group md:p-3 md:pl-6 top-3 md:top-6 w-fit hover:bg-stone-300 bg-black/20'>
+          <ArrowLeft size={20} weight='regular' className='text-stone-200 group-hover:text-stone-900' />
+          <p className='leading-none text-stone-200 group-hover:text-stone-900'>Voltar</p>
+        </Link>
         <CanvasLoading src='/360-thumb.jpg' />
         <Scene type='enviroment'>
           <Sky360 imageUrl='/360.jpg' />
-          <Target hAngle={305} route={`/local/${route.query.local}/item/object-slug`} />
+          <Target hAngle={305} route={`/local/${router.query.local}/item/object-slug`} />
         </Scene>
       </main>
 
