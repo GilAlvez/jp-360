@@ -14,10 +14,10 @@ body {
 
 @layer base {
   * {
-    @apply m-0 p-0 box-border scroll-smooth;
+    @apply m-0 p-0 box-border;
   }
   html {
-    @apply text-[14px] md:text-[16px] 3xl:text-[18px] scrollbar-none scroll-smooth;
+    @apply text-[14px] md:text-[16px] 3xl:text-[18px] scrollbar-none scroll-smooth scroll-pt-20;
   }
   body {
     @apply antialiased font-medium transition duration-300

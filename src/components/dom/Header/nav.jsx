@@ -2,6 +2,7 @@ import Link from 'next/link'
 
 const NavLinks = (props) => {
   const { className, onClick } = props
+
   const menuLinks = [
     { label: 'Inicio', url: '/#hero' },
     { label: 'Ambientes', url: '/#ambientes' },
@@ -15,7 +16,7 @@ const NavLinks = (props) => {
           <li
             key={item.label}
             className='flex text-base font-medium whitespace-nowrap hover:underline underline-offset-2 '>
-            <Link href={item.url} className='py-3 pr-5 md:pr-0' onClick={onClick}>
+            <Link href={item.url} className='py-3 pr-5 md:pr-0' onClick={onClick} scroll={false}>
               {item.label}
             </Link>
           </li>

@@ -78,7 +78,7 @@ export const EnviromentsSection = () => {
   }, [fullEnviromentsList, width])
 
   return (
-    <section id='ambientes' className='pt-20 pb-20 bg-white app-container'>
+    <section id='ambientes' className='pb-20 bg-white pt-14 app-container'>
       <div className='mb-5'>
         <h2 className='text-3xl font-bold xl:text-4xl'>Ambientes 360</h2>
         <div className='w-24 h-1 rounded-full bg-primary-500'></div>

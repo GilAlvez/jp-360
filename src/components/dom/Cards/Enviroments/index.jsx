@@ -5,7 +5,7 @@ export function EnviromentCard({ name, link, imageUrl, aspect = 'square' }) {
   return (
     <Link
       href={link}
-      className={`relative p-4 transition-all duration-300 rounded shadow-md hover:shadow-lg group ${
+      className={`relative p-4 transition duration-300 rounded shadow-md hover:shadow-lg group ${
         aspect === 'square' ? 'aspect-square' : aspect === 'video' ? 'aspect-[2.25_/_1]' : ''
       }`}>
       <div className='absolute inset-0'>
