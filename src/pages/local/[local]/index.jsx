@@ -92,7 +92,7 @@ export default function LocalPage() {
 
         <div className='min-h-full border-t md:border-l border-stone-300' />
 
-        <aside className='flex-grow py-14'>
+        <aside className='flex-grow'>
           <div className='mb-5 '>
             <h3 className='text-xl font-bold '>Outros ambientes</h3>
           </div>
