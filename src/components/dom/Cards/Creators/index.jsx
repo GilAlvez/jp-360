@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 export const CreatorCard = ({ name, role, bio, imageSrc, socialLinks }) => {
   return (
@@ -15,9 +16,9 @@ export const CreatorCard = ({ name, role, bio, imageSrc, socialLinks }) => {
             const Icon = link.icon
             return (
               <li key={link.href}>
-                <a href={link.href} target='_blank' rel='noopener noreferrer'>
+                <Link href={link.href} rel='noopener noreferrer' target='_blank'>
                   <Icon className='text-2xl hover:text-primary-900 ' />
-                </a>
+                </Link>
               </li>
             )
           })}

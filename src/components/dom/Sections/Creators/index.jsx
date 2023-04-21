@@ -25,7 +25,7 @@ export const CreatorsSection = () => {
     },
   ]
   return (
-    <section id='idealizadores' className='pt-20 pb-20 md:pt-14 app-container bg-primary-100'>
+    <section id='idealizadores' className='pt-20 pb-20 app-container bg-primary-100'>
       <div className='mb-5'>
         <h2 className='text-3xl font-bold xl:text-4xl'>Idealizadores</h2>
         <div className='w-24 h-1 rounded-full bg-primary-500'></div>
