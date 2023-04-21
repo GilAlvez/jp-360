@@ -2,10 +2,9 @@ import Image from 'next/image'
 import tw from 'tailwind-styled-components'
 
 export const Container = tw.section`
-  max-w-lg 
+  max-w-lg
   lg:max-w-xl 
-  xl:max-w-2xl 
-  2xl:max-w-3xl 
+  xl:max-w-3xl 
   
   mx-auto 
   lg:m-0
