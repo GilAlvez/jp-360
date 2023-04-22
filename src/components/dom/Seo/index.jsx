@@ -1,8 +1,9 @@
 import Head from 'next/head'
 
-const titleDefault = 'JP 360'
+const titleDefault = 'São Francisco'
 const url = 'https://jp-360.vercel.app/'
-const description = 'Description'
+const description =
+  'Explore o Centro Cultural São Francisco em 360º e veja objetos históricos em 3D com detalhes técnicos. Uma experiência imersiva e enriquecedora.'
 const author = 'Gil Alves'
 
 export default function Seo({ title = titleDefault }) {
@@ -10,8 +11,7 @@ export default function Seo({ title = titleDefault }) {
     <Head>
       {/* Recommended Meta Tags */}
       <meta charSet='utf-8' />
-      <meta name='language' content='english' />
-      <meta httpEquiv='content-type' content='text/html' />
+      <meta name='language' content='pt-BR' />
       <meta name='author' content={author} />
       <meta name='designer' content={author} />
       <meta name='publisher' content={author} />
@@ -20,7 +20,7 @@ export default function Seo({ title = titleDefault }) {
       <meta name='description' content={description} />
       <meta
         name='keywords'
-        content='Software Engineer,Product Manager,Project Manager,Data Scientist,Computer Scientist'
+        content='imersão 360, ambiente 3D, Centro Cultural São Francisco, tour virtual, objetos históricos, realidade virtual, experiência interativa, visualização tridimensional, cultura brasileira, tecnologia WebGL'
       />
       <meta name='robots' content='index,follow' />
       <meta name='distribution' content='web' />
@@ -38,13 +38,13 @@ export default function Seo({ title = titleDefault }) {
       <link rel='apple-touch-icon' sizes='32x32' href='/icons/favicon-32x32.png' />
       <link rel='apple-touch-icon' sizes='180x180' href='/icons/apple-touch-icon.png' />
       <link rel='manifest' href='/manifest.json' />
-      <link rel='mask-icon' color='#000000' href='/icons/safari-pinned-tab.svg' />
+      <link rel='mask-icon' color='#18181b' href='/icons/safari-pinned-tab.svg' />
       <link rel='apple-touch-startup-image' href='/startup.png' /> {/* no startup */}
       {/* Meta Tags for HTML pages on Mobile */}
-      {/* <meta name="format-detection" content="telephone=yes"/>
-        <meta name="HandheldFriendly" content="true"/>  */}
+      <meta name='format-detection' content='telephone=yes' />
+      <meta name='HandheldFriendly' content='true' />
       <meta name='viewport' content='width=device-width, minimum-scale=1, initial-scale=1.0' />
-      <meta name='theme-color' content='#000' />
+      <meta name='theme-color' content='#18181b' />
       <link rel='shortcut icon' href='/icons/favicon.ico' />
       {/* 
       Twitter Summary card

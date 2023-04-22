@@ -1,6 +1,6 @@
 {
-  "name": "R3F Next Starter",
-  "short_name": "R3F Next Starter",
+  "name": "Centro Cultural São Francisco",
+  "short_name": "São Francisco",
   "icons": [
     {
       "src": "/icons/favicon.ico",
@@ -24,6 +24,6 @@
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#d9a96b",
+  "background_color": "#1c1917"
 }
