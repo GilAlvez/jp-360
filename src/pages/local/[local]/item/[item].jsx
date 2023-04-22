@@ -2,7 +2,6 @@ import Seo from '@/components/dom/Seo'
 import { objectsSpecifications } from '@/data/objects-specifications'
 import dynamic from 'next/dynamic'
 import Image from 'next/image'
-import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { ArrowLeft } from 'phosphor-react'
 import { useEffect, useState } from 'react'
@@ -31,12 +30,12 @@ export default function ItemPage() {
 
       <div className='flex flex-col lg:flex-row flex-grow lg:h-[calc(100vh_-_10rem)] '>
         <main id='local' className='relative aspect-square md:aspect-auto lg:w-2/3 bg-stone-200'>
-          <Link
-            href={`/local/${router.query.local}`}
+          <div
+            onClick={() => router.back()}
             className='absolute z-10 flex items-center gap-1 p-2 pl-4 transition rounded-r-full md:p-3 md:pl-6 top-3 md:top-6 w-fit hover:bg-stone-400/70 bg-stone-300'>
             <ArrowLeft size={20} weight='regular' />
             <p className='leading-none'>Voltar</p>
-          </Link>
+          </div>
 
           {object.type === 'model' && (
             <Scene type='model' shadows dpr={[1, 2]} camera={{ position: [0, 0, 0], fov: 40 }}>
