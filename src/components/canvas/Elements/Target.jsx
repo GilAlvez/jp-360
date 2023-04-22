@@ -1,27 +1,22 @@
-import { useState, useRef } from 'react'
-import { useRouter } from 'next/router'
-import { useFrame } from '@react-three/fiber'
+import { useSphericalCoordinates } from '@/hooks/useSphericalCoordinates'
 import { useCursor } from '@react-three/drei'
+import { useFrame } from '@react-three/fiber'
+import { useRouter } from 'next/router'
+import { useRef, useState } from 'react'
 import { Group } from 'three'
 
 export default function Target({ route, hAngle = 0, vAngle = 90, radius = 500, ...props }) {
   const router = useRouter()
   const [hovered, hover] = useState(false)
-  useCursor(hovered)
-
   const groupRef = useRef(new Group())
+  const coordinates = useSphericalCoordinates(hAngle, vAngle, radius)
 
-  const x = radius * Math.sin((vAngle * Math.PI) / 180) * Math.cos((hAngle * Math.PI) / 180)
-  const y = radius * Math.cos((vAngle * Math.PI) / 180)
-  const z = radius * Math.sin((vAngle * Math.PI) / 180) * Math.sin((hAngle * Math.PI) / 180)
-
-  useFrame(({ camera }) => {
-    groupRef.current.lookAt(camera.position)
-  })
+  useCursor(hovered)
+  useFrame(({ camera }) => groupRef.current.lookAt(camera.position))
 
   return (
     <group
-      position={[x, y, z]}
+      position={coordinates}
       ref={groupRef}
       onClick={() => router.push(route)}
       onPointerOver={() => hover(true)}
