@@ -4,7 +4,7 @@ const titleDefault = 'São Francisco'
 const url = 'https://jp-360.vercel.app/'
 const description =
   'Explore o Centro Cultural São Francisco em 360º e veja objetos históricos em 3D com detalhes técnicos. Uma experiência imersiva e enriquecedora.'
-const author = 'Gil Alves'
+const author = 'Gildson Alves'
 
 export default function Seo({ title = titleDefault }) {
   return (
