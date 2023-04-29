@@ -16,23 +16,24 @@ export default function Footer({ hidden = false, short = false }) {
 
   return (
     <div className='mt-auto'>
+      {/* 1st Footer */}
       {!short && (
         <footer
-          className={`py-8 app-container place-items-baseline d-footer bg-stone-800 text-stone-100 ${
+          className={`py-5 app-container place-items-baseline d-footer bg-stone-800 text-stone-100 ${
             hidden && 'hidden'
           }`}>
           <div>
-            <picture className='relative w-40 h-24'>
+            <picture className='relative w-32 h-16'>
               <Image src='/LogoWhite.svg' alt='Logo' fill priority />
             </picture>
-            <p className='max-w-sm text-sm'>
+            <p className='max-w-sm pt-2 text-sm'>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem dolore eligendi quo blanditiis, accusamus
               cumque veritatis vero at dolor, velit numquam amet ea dolorum?
             </p>
           </div>
           {columns.map((col) => (
             <div key={col.title}>
-              <h6 className='d-footer-title'>{col.title}</h6>
+              <h6 className='mb-0 d-footer-title'>{col.title}</h6>
               {col.data.map((cell) => (
                 <a key={cell.name} className='d-link d-link-hover' href={cell.link}>
                   {cell.name}
@@ -43,11 +44,12 @@ export default function Footer({ hidden = false, short = false }) {
         </footer>
       )}
 
-      <footer className='items-center py-4 gap-y-4 d-footer bg-stone-900 text-stone-300 app-container'>
+      {/* 2nd Footer */}
+      <footer className='items-center justify-between py-3 gap-y-3 d-footer bg-stone-900 text-stone-300 app-container'>
         <div className='items-center grid-flow-col text-center'>
-          <p>Copyright © 2023 - Todos os direitos reservados</p>
+          <p className='text-xs'>Copyright © 2023 - Todos os direitos reservados</p>
         </div>
-        <div className='grid-flow-col gap-4 md:place-self-center md:justify-self-end'>
+        <div className='grid-flow-col gap-4'>
           {socials.map((social) => {
             const Icon = social.icon
             return (
@@ -57,7 +59,7 @@ export default function Footer({ hidden = false, short = false }) {
                 target='_blank'
                 rel='noreferrer noopener'
                 className='fill-current'>
-                <Icon className='text-2xl hover:text-primary-900' />
+                <Icon className='text-xl hover:text-stone-400' />
               </a>
             )
           })}
