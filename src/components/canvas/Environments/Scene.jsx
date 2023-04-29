@@ -23,7 +23,7 @@ export default function Scene({ children, type = 'free', ref, ...props }) {
           autoRotate: true,
           autoRotateSpeed: 0.25,
         }
-      : type === 'enviroment'
+      : type === 'environment'
       ? {
           target: [0, 0, 0],
           enableZoom: false,

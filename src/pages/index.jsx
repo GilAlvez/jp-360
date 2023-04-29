@@ -1,6 +1,6 @@
 import CanvasLoading from '@/components/dom/CanvasLoading'
 import { CreatorsSection } from '@/components/dom/Sections/Creators'
-import { EnviromentsSection } from '@/components/dom/Sections/Enviroments'
+import { EnvironmentsSection } from '@/components/dom/Sections/Environments'
 import { NewsSection } from '@/components/dom/Sections/News'
 import Seo from '@/components/dom/Seo'
 import dynamic from 'next/dynamic'
@@ -27,13 +27,13 @@ export default function HomePage() {
             <h1 className='mb-4'>Passeio Cultural</h1>
             <p className='text-xl'>Viva a experiência de estar em um dos centros culturais mais incríveis do Brasil.</p>
           </div>
-          <Link className='btn btn-primary btn-filled btn-xl' href='/local/pagina-interna'>
+          <Link className='btn btn-primary btn-filled btn-xl' href='/local/local-example'>
             Visitar
           </Link>
         </section>
       </main>
 
-      <EnviromentsSection />
+      <EnvironmentsSection />
 
       <NewsSection />
 

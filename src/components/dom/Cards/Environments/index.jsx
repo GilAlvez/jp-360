@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-export function EnviromentCard({ name, link, imageUrl, aspect = 'square' }) {
+export function EnvironmentCard({ name, link, imageUrl, aspect = 'square' }) {
   return (
     <Link
       href={link}
