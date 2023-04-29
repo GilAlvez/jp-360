@@ -21,7 +21,7 @@ export default function App({ Component, pageProps }) {
       <div className='flex flex-col min-h-screen'>
         <Header hidden={pathname === '/404' && '/500'} float={pathname === '/'} />
         <Component {...pageProps} />
-        <Footer hidden={pathname === '/404' && '/500'} short={pathname !== '/'} />
+        <Footer hidden={pathname === '/404' && '/500'} short={pathname.includes('item')} />
       </div>
     </>
   )
