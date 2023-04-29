@@ -55,6 +55,11 @@ export const Title = tw.h1`
   text-4xl 
   font-bold
 `
+export const Subtitle = tw.h2`
+  mb-2 
+  text-2xl 
+  font-bold
+`
 export const Paragraph = tw.p`
   mb-6 
   text-lg 
